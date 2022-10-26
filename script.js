@@ -1,13 +1,12 @@
 'use strict';
 
 // Create a random number
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 
+// Enter game logic
 document.querySelector('.check').addEventListener('click', function () {
   const guessingNumber = Number(document.querySelector('.number-input').value);
-  console.log(typeof guessingNumber);
-
   // No input value
   if (!guessingNumber) {
     document.querySelector('.guess-message').textContent = 'Input some number';
@@ -44,4 +43,16 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+});
+
+// Restart the game logic
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('body').classList.remove('active');
+  document.querySelector('.question').classList.remove('active');
+  document.querySelector('.question').textContent = '???';
+  document.querySelector('.guess-message').textContent = 'Start guessing';
+  document.querySelector('.number-input').value = '';
 });
