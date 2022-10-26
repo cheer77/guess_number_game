@@ -3,6 +3,7 @@
 // Create a random number
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highscore = 0;
 
 // Enter game logic
 document.querySelector('.check').addEventListener('click', function () {
@@ -17,6 +18,11 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.question').textContent = secretNumber;
     document.querySelector('body').classList.add('active');
     document.querySelector('.question').classList.add('active');
+
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
 
     // To bigger number
   } else if (guessingNumber > secretNumber) {
