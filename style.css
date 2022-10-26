@@ -159,6 +159,25 @@ h1 {
   height: 3rem;
 }
 
+.guess-message.active {
+  animation: font-anim 2s infinite ease-in-out;
+  color: rgb(254, 72, 72);
+}
+
+@keyframes font-anim {
+  0% {
+    font-size: 16px;
+  }
+
+  50% {
+    font-size: 18px;
+  }
+
+  100% {
+    font-size: 16px;
+  }
+}
+
 .label-score {
   margin-bottom: 2rem;
 }
