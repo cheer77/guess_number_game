@@ -59,6 +59,12 @@ main {
   font-size: 2rem;
 }
 
+.text {
+  margin-bottom: 10px;
+  max-width: 200px;
+  text-align: center;
+}
+
 .right {
   width: 50rem;
   font-size: 2rem;
@@ -161,11 +167,25 @@ h1 {
   main {
     flex-direction: column;
   }
+  header {
+    height: 40vh;
+  }
+  h1 {
+    line-height: 1.5;
+  }
   .right {
     width: auto;
   }
   .left {
     width: 30rem;
+  }
+  .text {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  .main {
+    height: 50vh;
   }
   .btn {
     margin-top: 20px;

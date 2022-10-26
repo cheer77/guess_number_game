@@ -4,6 +4,7 @@
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
+document.querySelector('.number-input').value = 0;
 
 // Enter game logic
 document.querySelector('.check').addEventListener('click', function () {
@@ -60,5 +61,5 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.question').classList.remove('active');
   document.querySelector('.question').textContent = '???';
   document.querySelector('.guess-message').textContent = 'Start guessing';
-  document.querySelector('.number-input').value = '';
+  document.querySelector('.number-input').value = 0;
 });
