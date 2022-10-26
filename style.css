@@ -14,7 +14,26 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: #fff;
   background-color: rgb(0, 0, 0);
-  /*  background-color: rgb(9, 250, 21); */
+  transition: all 0.3s ease-in-out;
+}
+
+body.active {
+  /* background-color: rgb(146, 199, 116); */
+  animation: color-anim 2s infinite ease-in-out;
+}
+
+@keyframes color-anim {
+  0% {
+    background-color: rgb(146, 199, 116);
+  }
+
+  50% {
+    background-color: rgb(130, 226, 74);
+  }
+
+  100% {
+    background-color: rgb(146, 199, 116);
+  }
 }
 
 /* Layout Styles */
@@ -67,6 +86,25 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  transition: all 0.3s ease-in-out;
+}
+.question.active {
+  width: 35rem;
+  animation: width-anim 2s infinite ease-in-out;
+}
+
+@keyframes width-anim {
+  0% {
+    width: 25rem;
+  }
+
+  50% {
+    width: 35rem;
+  }
+
+  100% {
+    width: 25rem;
+  }
 }
 
 .between {
